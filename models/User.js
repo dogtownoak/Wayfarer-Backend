@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const mongoose = require('mongoose');
-=======
 const mongoose = require("mongoose");
->>>>>>> addison
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
