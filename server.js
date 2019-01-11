@@ -1,17 +1,15 @@
-const express = require('express');
+const express = require("express");
 
-const parser = require('body-parser')
-const passport = require('./config/passport')()
+const parser = require("body-parser");
+const passport = require("./config/passport")();
 
 // controllers
-
-
-const app = express()
+const app = express();
 
 // middleware
-app.use(parser.json())
-app.use(passport.initialize())
-app.use(express.static('public'));
+app.use(parser.json());
+app.use(passport.initialize());
+app.use(express.static("public"));
 
 // routes
 // app.use('/api/dogs', dogController)
@@ -19,7 +17,7 @@ app.use(express.static('public'));
 // app.use('/api/dogs', dogController)
 // app.use('/api/dogs', dogController)
 
-
+const port = 3001;
 
 // server connection
-app.listen(3001, () => console.log('Listening on port 3001 :)'))
+app.listen(port, () => console.log(`Listening on port ${port}`));
