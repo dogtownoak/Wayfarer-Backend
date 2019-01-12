@@ -1,23 +1,15 @@
-// const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-// const mongoose = require('../db/connection')
+mongoose.Promise = Promise;
 
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/project-01', { useNewUrlParser: true});
+mongoose
+  .connect("mongodb://localhost/WAYFARER-BACKEND")
+  .then(connection => console.log("Connection established!"))
+  .catch(err => console.log("Connection failed!", err));
 
-const mongoose = require('mongoose')
+const City = require("./City");
+const User = require("./User");
+const Comments = require("./Comments");
+const Post = require("./Post");
 
-mongoose.Promise = Promise
-
-mongoose.connect('mongodb://localhost/WAYFARER-BACKEND')
-    .then(connection => console.log('Connection established!'))
-    .catch(err => console.log('Connection failed!', err))
-
-const Cities = require('./Cities');
-const User = require('./User');
-const Comments = require('./Comments');
-const Posts = require('./Posts');
-
-exports.Cities = Cities;
-exports.User = User;
-exports.Comments = Comments;
-exports.Posts = Posts;
+module.exports = { City, User, Comments, Post };

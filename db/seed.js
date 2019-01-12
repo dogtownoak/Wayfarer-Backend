@@ -23,7 +23,7 @@ let city_list = {
 
 let user_list = [
   {
-    userName: "Jane Smith",
+    username: "Jane Smith",
     about: "Let me tell you about this user",
     currentCity: "San Francisco",
     profilePic: "https://picsum.photos/200",
