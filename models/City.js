@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const CitySchema = new Schema({
   city: String,
@@ -10,3 +10,14 @@ const CitySchema = new Schema({
 const City = mongoose.model("City", CitySchema);
 
 module.exports = City;
+
+
+
+
+
+
+
+
+
+
+
